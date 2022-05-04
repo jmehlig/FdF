@@ -6,7 +6,7 @@
 /*   By: jmehlig <jmehlig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 13:09:35 by jmehlig           #+#    #+#             */
-/*   Updated: 2022/05/04 12:41:39 by jmehlig          ###   ########.fr       */
+/*   Updated: 2022/05/04 17:15:51 by jmehlig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ void	ft_make_points(t_data *s, char *str)
 			j++;
 		}
 		i++;
+		ft_splitdel(&lines);
 	}
-	ft_splitdel(&lines);
 	ft_splitdel(&columns);
 }
 
