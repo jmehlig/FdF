@@ -6,7 +6,7 @@
 /*   By: jmehlig <jmehlig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 13:09:35 by jmehlig           #+#    #+#             */
-/*   Updated: 2022/05/04 17:15:51 by jmehlig          ###   ########.fr       */
+/*   Updated: 2022/05/04 18:41:07 by jmehlig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@ char	*to_str(int fd)
 {
 	char	*str;
 	char	*tmp;
+	char	*tmp2;
 
-	str = "";
+	str = ft_calloc(1, 1);
 	while (1)
 	{
 		tmp = get_next_line(fd);
 		if (!tmp)
 			break ;
+		tmp2 = str;
 		str = ft_strjoin(str, tmp);
+		free(tmp2);
 		ft_free(tmp);
 	}
 	return (str);
