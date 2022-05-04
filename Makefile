@@ -6,7 +6,7 @@
 #    By: jmehlig <jmehlig@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 16:19:01 by jmehlig           #+#    #+#              #
-#    Updated: 2022/05/03 18:05:39 by jmehlig          ###   ########.fr        #
+#    Updated: 2022/05/04 21:19:09 by jmehlig          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS =	$(SRCS_PATH)fdf.c \
 		$(SRCS_PATH)plot.c \
 		$(SRCS_PATH)get_data.c \
 		$(SRCS_PATH)utils.c \
+		$(SRCS_PATH)move.c \
 
 GET_NEXT_LINE_SRCS =	$(GET_NEXT_LINE_PATH)get_next_line.c \
 						$(GET_NEXT_LINE_PATH)get_next_line_utils.c \

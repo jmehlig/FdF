@@ -6,7 +6,7 @@
 /*   By: jmehlig <jmehlig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:53:01 by jmehlig           #+#    #+#             */
-/*   Updated: 2022/05/04 12:44:14 by jmehlig          ###   ########.fr       */
+/*   Updated: 2022/05/04 21:18:40 by jmehlig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ typedef struct s_bres
 typedef struct s_data
 {
 	int			zoom;
+	int			z_shift;
 	int			x_shift;
 	int			y_shift;
 	int			***matrix;
@@ -66,7 +67,7 @@ typedef struct s_data
 }				t_data;
 
 //fdf.c
-int			ft_keycodes(int keycode, t_data *s);
+int			ft_exit(int keycode, t_data *s);
 void		ft_init(t_data *s);
 void		my_mlx_matrix_put(t_data *s);
 int			ex(void);
@@ -90,5 +91,10 @@ int			get_colnum(char *str);
 int			get_newline_num(char *str);
 int			hex_to_deci(char *hex);
 void		free_matrix(t_data *s);
+
+//move.c
+int			keys(int keycode, t_data	*s_in);
+int			keycode_check(int keycode);
+void		create_new_map(t_data s);
 
 #endif

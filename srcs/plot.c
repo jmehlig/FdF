@@ -6,7 +6,7 @@
 /*   By: jmehlig <jmehlig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:45:51 by jmehlig           #+#    #+#             */
-/*   Updated: 2022/05/04 12:44:29 by jmehlig          ###   ########.fr       */
+/*   Updated: 2022/05/04 21:18:13 by jmehlig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,15 @@ t_iso	to_isometric(int x, int y, t_data *s)
 	int		z;
 
 	point.icolor = (s->matrix)[y][x][1];
-	z = ((s->matrix)[y][x][0]) * s->zoom / 7;
+	z = ((s->matrix)[y][x][0]) * s->zoom / 7 * s->z_shift;
 	x = (x - s->col / 2) * s->zoom;
 	y = (y - s->col / 2) * s->zoom;
 	point.ix = (x - y) * cos(0.523599);
 	point.iy = (-z) + (x + y) * cos(0.523599);
 	point.ix += s->col / 2;
 	point.iy += s->nl / 2;
+	point.ix = point.ix * s->zoom;
+	point.iy = point.iy * s->zoom;
 	point.ix += s->x_shift;
 	point.iy += s->y_shift;
 	return (point);
