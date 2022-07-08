@@ -6,7 +6,7 @@
 #    By: jmehlig <jmehlig@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 16:19:01 by jmehlig           #+#    #+#              #
-#    Updated: 2022/05/04 21:19:09 by jmehlig          ###   ########.fr        #
+#    Updated: 2022/05/05 12:29:03 by jmehlig          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ fclean_libft:
 fclean:		clean fclean_libft
 			$(RM) $(NAME)
 
-re:			fclean all
+re:			fclean
+			$(MAKE)
 
 
