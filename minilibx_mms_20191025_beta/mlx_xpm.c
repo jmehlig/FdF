@@ -16,7 +16,6 @@ typedef struct  s_xpm_col
   int           col;
 } t_xpm_col;
 
-
 struct  s_col_name
 {
   char  *name;

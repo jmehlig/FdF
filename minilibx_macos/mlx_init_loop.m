@@ -15,7 +15,6 @@ void	do_loop_hook2(CFRunLoopTimerRef observer, void * info)
   ((mlx_ptr_t *)info)->loop_hook(((mlx_ptr_t *)info)->loop_hook_data);
 }
 
-
 void do_loop_flush(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void * info)
 {
   mlx_ptr_t	*mlx_ptr;
