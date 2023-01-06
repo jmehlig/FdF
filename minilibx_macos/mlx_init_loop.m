@@ -10,7 +10,6 @@
 
 #include "font.c"
 
-
 void	do_loop_hook2(CFRunLoopTimerRef observer, void * info)
 {
   ((mlx_ptr_t *)info)->loop_hook(((mlx_ptr_t *)info)->loop_hook_data);
@@ -36,8 +35,6 @@ void do_loop_flush(CFRunLoopObserverRef observer, CFRunLoopActivity activity, vo
       win = win->next;
     }
 }
-
-
 
 
 void *mlx_init()
