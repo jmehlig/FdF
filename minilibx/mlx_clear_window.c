@@ -9,7 +9,6 @@
 */
 
 
-
 #include	"mlx_int.h"
 
 
